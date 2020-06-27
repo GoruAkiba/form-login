@@ -1,0 +1,132 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background:url(wa.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: sans-serif;
+}
+.body{
+	background-color: rgba(255, 255, 255, 0.61);
+	width: 1280px;
+	height: 600px;
+	margin: auto ;
+	margin-top: 10%;
+	padding: 0px;
+	overflow: hidden;
+	box-shadow: 0px 3px 6px #000000;
+}
+.foto{
+	background:url(as.png);
+	width: 50%;
+	height: 600px;
+	overflow: hidden;
+	background-size: cover;
+	opacity: 80%;
+	float: left;
+}
+
+.sebelah{
+	float: right;
+	width: 50%;
+	text-align: center;
+	margin-top: 5%;
+}
+h1{
+	font-family: cursive;
+	font-size: 40px;
+	padding: 20px;
+}
+h2{
+	font-family: cursive;
+	font-size: 20px;
+	padding: 10px;
+}
+.form{
+	overflow: hidden;
+}
+.form input[type="text"],
+.form input[type="password"]{
+	padding: 10px;
+	width: 350px;
+	margin-bottom: 10px;
+	border: none;
+	font-family: cursive;
+	text-align: center;
+	border-radius: 2px;
+
+}
+.form input[type="submit"]{
+	width: 300px;
+	padding: 5px;
+	font-family: cursive;
+	border: none;
+	background-color: #9E9E9E;
+	color: #ffffff;
+	font-size: 15px;
+	margin: auto;	
+	overflow: hidden;
+	margin-top: 10px;
+}
+.form input[type="submit"]:hover{
+	background-color: #C9C9C9;
+}
+.kiri{
+	font-family: cursive;
+	overflow: hidden;
+	padding: 10px;
+	margin-right:240px; 
+	color: #000;
+	text-decoration: none;	
+}
+.kiri:hover{
+	text-decoration: underline;
+}
+.register{
+
+	color: #000;
+	text-decoration: none;
+}
+.register:hover{
+	text-decoration: underline;
+}
+
+/*reaponsif begin*/
+
+@media screen and (max-width:600px){
+	*{
+		box-sizing: border-box;;
+	}
+
+	body{
+		background:url(wa.png);
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0px;
+	}
+
+	.body{
+		width:100vw;
+		justify-content: center;
+	}
+
+	.foto{
+		display: none;
+	}
+
+	.sebelah{
+		width:100vw;
+	}
+
+	.form{
+		width:100%;
+	}
+
+	.kiri{
+		margin:0px;
+	}
+
+}
