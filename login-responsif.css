@@ -95,7 +95,7 @@ h2{
 
 /*reaponsif begin*/
 
-@media screen and (max-width:600px){
+@media screen and (max-width:650px){
 	*{
 		box-sizing: border-box;;
 	}
