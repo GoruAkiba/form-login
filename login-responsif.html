@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
-	<!-- <meta name="viewport" content="width=device-width" charset="utf-8"> -->
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="login-responsif.css">
 	<meta charset="utf-8">
 </head>
@@ -12,16 +12,58 @@
 			
 		</div>
 		<div class="sebelah">
-			<form class="form">
-				<h1>SING IN</h1>
+			<!-- form biasa digunakan untuk server PHP 
+				untuk sementara karena kita tidak menggunakan PHP
+				maka form kita hilangkan.
+			-->
+			<!-- <form class="form"> -->
+
+			<!-- ganti form sebagai div dengan class form -->
+			<div class="form">
+				<h1>SIGN IN</h1>
 				<h2>Use your Accounts</h2>
-				<input type="text" name="username" placeholder="username/Email">
-				<input type="Password" name="Password" placeholder="Password"><br>
+
+				<!-- tambahkan id guna DOM -->
+				<input type="email" id="email" name="username" placeholder="username/Email">
+				<input type="Password" id="pswd" name="Password" placeholder="Password"><br>
 				<a href="#" class="kiri">Forget Password?</a><br>
-				<input type="submit" name="login" value="Log In"><br><br>
+				
+				<!-- ubah input submit menjadi button dengan onclick event -->
+				<button name="login" id="submit" onclick="validator()">LOGIN</button><br><br>
 				
 			<a href="#" class="register">Register?</a>	
-			</form>
+			</div>
+				
+			<!-- </form> -->
+			<script type="text/javascript">
+				//fungsi login
+				function login(){
+					console.log("melakukan login...");
+				};
+
+				// fungsi validasi
+				function validator(){
+					// HtmlDom ambil masing2 elemen input.
+					var email = document.getElementById("email"),
+						pswd = document.getElementById("pswd"),
+						error = []; // Array data error
+
+					// check validasi email jika err, tambahkan sebagai data err 
+					if(!email.value || !email.value.includes("@")) error.push("Email error!");
+					// check validasi password jika err, tambahkan sebagai data err
+					if(!pswd.value) error.push("password kosong!");
+
+					// jika tidak terdapat error -> login();
+					if(!error.length){
+						login();
+					} else {
+						// beri peringatan jika ada error
+						alert(error.join("\n"));
+						console.log("gagal melakukan login...");
+					}
+				};
+
+			</script>
 
 		</div>
 	</section>
