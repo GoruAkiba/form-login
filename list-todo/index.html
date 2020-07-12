@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>List Todo App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h2>List todo</h2>
+            <input type="text" id="inputan"/>
+            <button onclick="execute()">Add List</button>
+        </div>
+        <div>
+            <div class="container-list" id="todo-list" onclick="gg(event)">
+                
+
+            </div>
+            <div class="container-list" id="done-list"></div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="todo.js"></script>
+    <script>
+        function gg(x){
+            // console.log(x);
+            console.log(todo[x.target.parentElement.getAttribute("data-list")]);
+        }
+    </script>
+</html>
