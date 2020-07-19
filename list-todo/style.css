@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+	position: relative;
 }
 
 body{
@@ -8,6 +9,10 @@ body{
 
 }
 
+#main-list{
+	margin: auto;
+	align-items: center;
+}
 
 .container-list{
     width: 45%;
@@ -28,6 +33,7 @@ body{
 }	
 
 .list-item{
+	/* min-width: 350px; */
 	margin: 10px;
     background: #ffa218;
     border-radius: 5px;
@@ -114,9 +120,16 @@ h2{
 
 	/* padding: 5px; */
 	margin: 0px;
-	background-color: #555;
-	color: white;
+	background-color: #eee;
+	color: #555;
 
 	border-radius: 50%;
 	border: 0px;
+	transition: 0.5s;
+}
+
+#input-form button:hover{
+	background-color: #555;
+	color: white;
+	cursor: pointer;
 }
