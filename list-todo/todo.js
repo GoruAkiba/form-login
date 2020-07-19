@@ -9,6 +9,7 @@ function execute(){
     // console.log(input);
     Add(input);
     updateTodo();
+    document.getElementById("inputan").value = "";
 }
 
 function Add(a){
@@ -20,6 +21,7 @@ function Add(a){
     return todo;
 }
 
+
 function updateTodo(){
     // mengkosongkan data pada elemen todo-list
     todoBox.innerHTML = "";
@@ -30,8 +32,8 @@ function updateTodo(){
             <div class="list-item">
                <span>${i+1}. ${e.name}</span>
                <span data-list="${i}" class="sp-right">
-                   <span onclick="gg(event)">Done</span>
-                   <span onclick="gg(event)">close</span>
+                   <span onclick="moveToDone(event)">Done</span>
+                   <span onclick="closeTodo(event)">close</span>
                </span>
                <div class="sp-date">
                    tanggal: ${e.dateStamp}
@@ -41,6 +43,46 @@ function updateTodo(){
     })
 }
 
+function closeTodo(event){
+    var i = event.target.parentElement.getAttribute("data-list");
+    todo.splice(i,1)
+    updateTodo();
+}
+
+function moveToDone(event){
+    var i = event.target.parentElement.getAttribute("data-list");
+    var elm = todo[i];
+    done.push(elm);
+    todo.splice(i,1);
+    updateTodo();
+    updateDone();
+}
+
+function updateDone(){
+    // mengkosongkan data pada elemen todo-list
+    doneBox.innerHTML = "";
+
+    // membaca data pada var todo dan memasukan ke todo-list
+    done.map((e,i)=>{
+        doneBox.innerHTML += `
+            <div class="list-item">
+               <span>${i+1}. ${e.name}</span>
+               <span data-list="${i}" class="sp-right">
+                   <span onclick="closeDone(event)">close</span>
+               </span>
+               <div class="sp-date">
+                   tanggal: ${e.dateStamp}
+               </div>
+            </div>
+        `
+    })
+}
+
+function closeDone(event){
+    var i = event.target.parentElement.getAttribute("data-list");
+    done.splice(i,1)
+    updateDone();
+}
 // OOP
 // var node = {
 //     todo:[],

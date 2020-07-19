@@ -6,8 +6,10 @@
     <body>
         <div>
             <h2>List todo</h2>
-            <input type="text" id="inputan"/>
-            <button onclick="execute()">Add List</button>
+            <div id="input-form">
+                <input class="input-children" type="text" id="inputan"/>
+                <button class="input-children" onclick="execute()">+</button>
+            </div>
         </div>
         <div>
             <div class="container-list" id="todo-list" onclick="gg(event)">
@@ -21,8 +23,8 @@
     <script type="text/javascript" src="todo.js"></script>
     <script>
         function gg(x){
-            // console.log(x);
-            console.log(todo[x.target.parentElement.getAttribute("data-list")]);
+            console.log(x);
+            // console.log(todo[x.target.parentElement.getAttribute("data-list")]);
         }
     </script>
 </html>
