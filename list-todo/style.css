@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 body{
 	font-family: century gothic;
 	background-color: antiquewhite;
@@ -18,7 +22,7 @@ body{
 
 	vertical-align: top;
 	
-	box-shadow: 0px 0px 15px #555;
+	box-shadow: 0px 0px 15px #aaa;
 	background-color: white;
 	border-radius: 10px;
 }	
@@ -64,9 +68,23 @@ body{
 	color: #333;
 }
 
+#main-input{
+	max-width: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+h2{
+	font-size: 46px;
+	margin-bottom: 5px;
+	color: #ffaaaa;
+}
+
+
 #input-form {
 	/* height: 45px; */
-	padding: 5px;
+	
+	padding: 15px;
 	background-color: white;
 	border-radius: 20px;
 
@@ -75,16 +93,27 @@ body{
 }
 
 .input-children{
-	vertical-align: middle;
+	height: 25px;
+	vertical-align: top;
+	padding: 5px;
+}
+
+#input-form input{
+	width: 90%;
+	border: 0px;
+	outline: 0px;
+	font-size: 14px;
 }
 
 #input-form button{
-	--w: 35px;
+	--w: 25px;
 	width: var(--w);
 	height: var(--w);
 	float: right;
+	outline: 0px;
 
-	padding: 5px;
+	/* padding: 5px; */
+	margin: 0px;
 	background-color: #555;
 	color: white;
 
