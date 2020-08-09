@@ -1,0 +1,126 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: century gothic;
+}
+
+.inblk{
+    position: relative;
+    display: inline-block;
+}
+
+.Nav{
+    height: 50px;   
+    padding: 10px;
+    min-width: 880px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 0 5px #888;
+
+}
+
+#main {
+
+    width: 95vw;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: auto;
+    padding: 15px;
+
+    background-color: white;
+    box-shadow: 0px 0px 15px #555;
+
+}
+
+.Nav-header {
+    margin-right: 50px;
+    
+}
+
+.Nav-header h2{
+    font-family: 'Times New Roman';
+    font-size: 28px;
+}
+
+.Nav-child {
+    margin:5px;
+    cursor: pointer;
+}
+
+
+
+.Nav-wl::after{
+    content: "*";
+}
+
+
+.child-list {
+    min-width: 180px;
+    position: absolute;
+    background-color: #fefefe;
+    padding: 10px;
+
+    display: none;
+}
+
+.child-list-nd {
+    min-width: 180px;
+    position: absolute;
+    top: 0px;
+    right: -180px;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+
+    display: none;
+}
+
+
+.Nav-wl:hover .child-list{
+    display: block;
+}
+
+.Nav-wl-nd:hover .child-list-nd{
+    display: block;
+}
+
+.child-list li {
+    list-style-type: none;
+    padding: 5px;
+    border-bottom: 2px solid #aaf;
+    
+}
+
+.child-list a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #888;
+
+}
+
+/*lencana instagram*/
+#profile{
+    padding: 10px;
+    box-shadow: 0 0 10px #444; 
+}
+
+
+.pp-profile{
+    width: 80px;
+    height: 80px;
+
+    background-color: #aaa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #444; 
+
+}
+
+
+
+.pp-info{
+    vertical-align: top;
+    padding: 10px;
+}
